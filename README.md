@@ -1,6 +1,6 @@
-# Zealot
+# Zealot iOS SDK
 
-[![CI Status](https://img.shields.io/travis/icyleaf/Zealot.svg?style=flat)](https://travis-ci.org/icyleaf/Zealot)
+[![CI Status](https://img.shields.io/travis/getzealot/zealot-ios.svg?style=flat)](https://travis-ci.org/getzealot/zealot-ios)
 [![Version](https://img.shields.io/cocoapods/v/Zealot.svg?style=flat)](https://cocoapods.org/pods/Zealot)
 [![License](https://img.shields.io/cocoapods/l/Zealot.svg?style=flat)](https://cocoapods.org/pods/Zealot)
 [![Platform](https://img.shields.io/cocoapods/p/Zealot.svg?style=flat)](https://cocoapods.org/pods/Zealot)

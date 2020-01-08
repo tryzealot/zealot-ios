@@ -1,0 +1,6 @@
+framework module Pods_Zealot_Example {
+  umbrella header "Pods-Zealot_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

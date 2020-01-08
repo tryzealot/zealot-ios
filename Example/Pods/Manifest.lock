@@ -1,0 +1,16 @@
+PODS:
+  - Zealot (0.1.0)
+
+DEPENDENCIES:
+  - Zealot (from `../`)
+
+EXTERNAL SOURCES:
+  Zealot:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Zealot: 555c2a60634f0bf6e522b1849d20bc3bd83c59a6
+
+PODFILE CHECKSUM: 8c2e69512fa140c4830a46fd56e144a027bc8ffd
+
+COCOAPODS: 1.8.4

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Zealot
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        let zealot = Zealot(endpoint: "http://localhost:3000",
+                            channelKey: "05da6cc65d0302c9f85de7fa219202f8")
+        zealot.checkVersion()
+        
         return true
     }
 
