@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "Zealot_Example.app"
-               BlueprintName = "Zealot_Example"
-               ReferencedContainer = "container:Zealot.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "Zealot_Tests.xctest"
-               BlueprintName = "Zealot_Tests"
+               BlueprintIdentifier = "AC7610DC23CD9C2D00B34776"
+               BuildableName = "ZealotObjC_Example.app"
+               BlueprintName = "ZealotObjc_Example"
                ReferencedContainer = "container:Zealot.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -41,26 +27,7 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "Zealot_Example.app"
-            BlueprintName = "Zealot_Example"
-            ReferencedContainer = "container:Zealot.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "Zealot_Tests.xctest"
-               BlueprintName = "Zealot_Tests"
-               ReferencedContainer = "container:Zealot.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -77,9 +44,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "Zealot_Example.app"
-            BlueprintName = "Zealot_Example"
+            BlueprintIdentifier = "AC7610DC23CD9C2D00B34776"
+            BuildableName = "ZealotObjC_Example.app"
+            BlueprintName = "ZealotObjc_Example"
             ReferencedContainer = "container:Zealot.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -94,9 +61,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "Zealot_Example.app"
-            BlueprintName = "Zealot_Example"
+            BlueprintIdentifier = "AC7610DC23CD9C2D00B34776"
+            BuildableName = "ZealotObjC_Example.app"
+            BlueprintName = "ZealotObjc_Example"
             ReferencedContainer = "container:Zealot.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
