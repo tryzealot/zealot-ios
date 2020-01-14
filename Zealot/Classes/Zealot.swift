@@ -9,23 +9,23 @@ import UIKit
 
 @objcMembers
 public final class Zealot: NSObject {
-    public var enviroment: String = "release"
+    public let defaultEnvironment: String = "default"
+    public var enviroment: String
 
     private var endpoint: String
-    private var releaseChannelKey: String
-    private var betaChannelKey: String
+    private var channelKeys: [String: String] = [:]
     
     public init(endpoint: String, channelKey: String) {
         self.endpoint = endpoint
-        self.releaseChannelKey = channelKey
-        self.betaChannelKey = channelKey
+        self.enviroment = defaultEnvironment
+        self.channelKeys[enviroment] = channelKey
         super.init()
     }
     
-    public init(endpoint: String, releaseChannelKey: String, betaChannelKey: String) {
+    public init(endpoint: String, channelKey: String, enviroment: String) {
         self.endpoint = endpoint
-        self.releaseChannelKey = releaseChannelKey
-        self.betaChannelKey = betaChannelKey
+        self.enviroment = enviroment
+        self.channelKeys[enviroment] = channelKey
         super.init()
     }
 }
@@ -33,7 +33,7 @@ public final class Zealot: NSObject {
 // MARK: - Public methods
 public extension Zealot {
     func checkVersion() {
-        let client = Client(endpoint: endpoint, channelKey: useChannelKey())
+        let client = try! Client(endpoint: endpoint, channelKey: useChannelKey())
         client.checkVersion { (result) in
             switch result {
             case .success(let channel):
@@ -78,16 +78,13 @@ private extension Zealot {
         let alert = UIAlertController(title: title,
                                                 message: message,
                                                 preferredStyle: .alert)
+        
         alert.setMaxHeight(UIScreen.main.bounds.height / 2)
         alert.addTextView(text: changelog)
         alert.addAction(updateAlertAction(url: release.installUrl))
         alert.addAction(cancelAlertAction())
         
         return alert
-    }
-    
-    func setAlertMaxHeight(alert: UIAlertController) {
-        
     }
 }
 
@@ -106,19 +103,22 @@ private extension Zealot {
         return changelogMessage.joined(separator: "\n")
     }
 
-    func useChannelKey() -> String {
-        let channelKey: String?
-        if (enviroment == "release") {
-            channelKey = releaseChannelKey
-        } else {
-            channelKey = betaChannelKey
+    func useChannelKey() throws -> String {
+        guard let channelKey = channelKeys[enviroment] else {
+            let defaultChannelkey = channelKeys[defaultEnvironment]
+            if defaultChannelkey != nil {
+                return defaultChannelkey!
+            }
+            
+            throw ZealotError.notFoundChannelKey
         }
         
-        return channelKey!
+        return channelKey
     }
 }
 
 enum ZealotError: Error {
-    case not_found_channel
-    case invaild_json(String)
+    case notFoundChannelKey
+    case notFoundChannel
+    case invaildJson(String)
 }

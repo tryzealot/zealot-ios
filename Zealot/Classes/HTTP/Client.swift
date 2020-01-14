@@ -7,6 +7,7 @@
 
 import Foundation
 
+@objcMembers
 public final class Client {
     private var endpoint: String
     private var channelKey: String
@@ -26,7 +27,7 @@ public final class Client {
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, let response = response as? HTTPURLResponse,
                 response.statusCode == 200, error == nil else {
-                    completion?(.failure(.not_found_channel))
+                    completion?(.failure(.notFoundChannel))
                     return
             }
 
@@ -35,7 +36,7 @@ public final class Client {
                 let channel = try decoder.decode(Channel.self, from: data)
                 completion?(.success(channel))
             } catch let parsingError {
-                completion?(.failure(.invaild_json(parsingError.localizedDescription)))
+                completion?(.failure(.invaildJson(parsingError.localizedDescription)))
             }
         }
         task.resume()

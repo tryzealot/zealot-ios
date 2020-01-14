@@ -8,16 +8,34 @@
 import UIKit
 
 extension UIAlertController {
-    public func show(animated: Bool = true, style: UIBlurEffectStyle? = nil, completion: (() -> Void)? = nil) {
+    @objc public func addTextView(text: String) {
+        var changelog = text
+        if text.isEmpty {
+            changelog = "暂无更新日志"
+        }
+
+        let textViewer = TextViewController(text: changelog)
+        set(vc: textViewer)
+    }
+    
+    @objc func setMaxHeight(_ height: CGFloat) {
+        guard let view = view else { return }
+        
+        let height = NSLayoutConstraint(item: view,
+                                        attribute: .height,
+                                        relatedBy: .lessThanOrEqual,
+                                        toItem: nil,
+                                        attribute: .notAnAttribute,
+                                        multiplier: 1,
+                                        constant: height)
+        view.addConstraint(height)
+    }
+    
+    public func show(animated: Bool = true, style: UIBlurEffect.Style? = nil, completion: (() -> Void)? = nil) {
         DispatchQueue.main.async {
             let rootVC = UIApplication.shared.keyWindow?.rootViewController
             rootVC?.present(self, animated: animated, completion: completion)
         }
-    }
-
-    public func addTextView(text: String) {
-        let textViewer = TextViewController(text: text)
-        set(vc: textViewer)
     }
     
     func set(vc: UIViewController?, width: CGFloat? = nil, height: CGFloat? = nil) {
@@ -28,19 +46,9 @@ extension UIAlertController {
             preferredContentSize.height = height
         }
     }
-    
-    func setMaxHeight(_ height: CGFloat) {
-        let height = NSLayoutConstraint(item: view,
-                                        attribute: .height,
-                                        relatedBy: .lessThanOrEqual,
-                                        toItem: nil,
-                                        attribute: .notAnAttribute,
-                                        multiplier: 1,
-                                        constant: height)
-        view.addConstraint(height)
-    }
 }
 
+@objcMembers
 final class TextViewController: UIViewController {
     fileprivate lazy var textView: UITextView = {
         $0.isEditable = false
@@ -54,7 +62,7 @@ final class TextViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         
         textView.text = text
-        textView.textContainerInset = UIEdgeInsetsMake(0, 16, 16, 16)
+        textView.textContainerInset = UIEdgeInsets(top: 0, left: 16, bottom: 16, right: 16)
         textView.flashScrollIndicators()
     }
     

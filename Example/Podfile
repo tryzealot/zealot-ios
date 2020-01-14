@@ -1,11 +1,7 @@
+platform :ios, '11.0'
+
 use_frameworks!
 
 target 'Zealot_Example' do
   pod 'Zealot', :path => '../'
-
-  target 'Zealot_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end
