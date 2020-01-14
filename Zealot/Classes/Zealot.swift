@@ -11,9 +11,8 @@ import UIKit
 public final class Zealot: NSObject {
     public let defaultEnvironment: String = "default"
     public var enviroment: String
-
-    private var endpoint: String
-    private var channelKeys: [String: String] = [:]
+    public var endpoint: String
+    public var channelKeys: [String: String] = [:]
     
     public init(endpoint: String, channelKey: String) {
         self.endpoint = endpoint
@@ -32,6 +31,11 @@ public final class Zealot: NSObject {
 
 // MARK: - Public methods
 public extension Zealot {
+    
+    func setChannelKey(channelKey: String, environment: String) {
+        self.channelKeys[environment] = channelKey
+    }
+    
     func checkVersion() {
         let client = try! Client(endpoint: endpoint, channelKey: useChannelKey())
         client.checkVersion { (result) in
