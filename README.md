@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/Zealot.svg?style=flat)](https://cocoapods.org/pods/Zealot)
 [![Platform](https://img.shields.io/cocoapods/p/Zealot.svg?style=flat)](https://cocoapods.org/pods/Zealot)
 
+iOS 组件提供为 Zealot 检查新版本和安装的服务，支持 Swift 和 Objective-C。
+
 ## 安装
 
 ### Cocoapods
@@ -48,7 +50,7 @@ zealot.checkVersion()
 
 ```objective-c
 // Objective-C
-Zealot *zealot = [[Zealot alloc] initWithEndpoint:@"http://zealot.test" 
+Zealot *zealot = [[Zealot alloc] initWithEndpoint:@"http://zealot.test"
                                        channelKey:@"..."];
 [zealot checkVersion];
 ```
