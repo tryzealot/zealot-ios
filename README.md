@@ -1,10 +1,5 @@
 # Zealot iOS SDK
 
-[![CI Status](https://img.shields.io/travis/getzealot/zealot-ios.svg?style=flat)](https://travis-ci.org/getzealot/zealot-ios)
-[![Version](https://img.shields.io/cocoapods/v/Zealot.svg?style=flat)](https://cocoapods.org/pods/Zealot)
-[![License](https://img.shields.io/cocoapods/l/Zealot.svg?style=flat)](https://cocoapods.org/pods/Zealot)
-[![Platform](https://img.shields.io/cocoapods/p/Zealot.svg?style=flat)](https://cocoapods.org/pods/Zealot)
-
 iOS 组件提供为 Zealot 检查新版本和安装的服务，支持 Swift 和 Objective-C。
 
 ## 安装
@@ -16,7 +11,7 @@ iOS 组件提供为 Zealot 检查新版本和安装的服务，支持 Swift 和 
 > 未达到上线标准前暂不上 Cocoapods Specs
 
 ```ruby
-pod 'Zealot', :git => 'https://github.com/getzealot/zealot-ios.git', :branch => 'master'
+pod 'Zealot', :git => 'https://git.haohaozhu.me/zealot/zealot-ios.git', :branch => 'develop'
 ```
 
 保存后开始安装：
@@ -27,7 +22,7 @@ pod install
 
 ## 使用
 
-1. 在 AppDelegate 文件t引入 Zealot 框架头：
+1. 在 AppDelegate 文件引入 Zealot 框架头：
 
 ```swift
 // Swift
@@ -54,11 +49,3 @@ Zealot *zealot = [[Zealot alloc] initWithEndpoint:@"http://zealot.test"
                                        channelKey:@"..."];
 [zealot checkVersion];
 ```
-
-## Author
-
-icyleaf, icyleaf.cn@gmail.com
-
-## License
-
-Zealot is available under the MIT license. See the LICENSE file for more info.
