@@ -27,6 +27,13 @@ public final class Zealot: NSObject {
         self.channelKeys[enviroment] = channelKey
         super.init()
     }
+    
+    public init(endpoint: String, channelKeys: [String: String], default_enviroment: String) {
+        self.endpoint = endpoint
+        self.enviroment = default_enviroment
+        self.channelKeys = channelKeys
+        super.init()
+    }
 }
 
 // MARK: - Public methods
