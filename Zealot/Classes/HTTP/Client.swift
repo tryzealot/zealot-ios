@@ -47,7 +47,8 @@ public final class Client {
             URLQueryItem(name: "channel_key", value: channelKey),
             URLQueryItem(name: "bundle_id", value: bundleId),
             URLQueryItem(name: "release_version", value: version),
-            URLQueryItem(name: "build_version", value: buildVersion)
+            URLQueryItem(name: "build_version", value: buildVersion),
+            URLQueryItem(name: "zealot_version", value: zealotVersion)
         ]
     }
 }
@@ -63,5 +64,9 @@ extension Client {
     
     var buildVersion: String {
         return Bundle.main.infoDictionary?["CFBundleVersion"] as! String
+    }
+    
+    var zealotVersion: String {
+        return Bundle(for: type(of: self)).object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
     }
 }

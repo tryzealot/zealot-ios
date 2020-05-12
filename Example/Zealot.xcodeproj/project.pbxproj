@@ -70,7 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				607FACD21AFB9204008FA782 /* Example Swift for Zealot */,
+				607FACD21AFB9204008FA782 /* Example for Zealot */,
 				607FACD11AFB9204008FA782 /* Products */,
 				3B46E4567265ACD05584F782 /* Pods */,
 				46BB8A0C74B7A0943C75D022 /* Frameworks */,
@@ -85,7 +85,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		607FACD21AFB9204008FA782 /* Example Swift for Zealot */ = {
+		607FACD21AFB9204008FA782 /* Example for Zealot */ = {
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
@@ -95,7 +95,7 @@
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
-			name = "Example Swift for Zealot";
+			name = "Example for Zealot";
 			path = Zealot;
 			sourceTree = "<group>";
 		};
@@ -159,10 +159,9 @@
 			};
 			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "Zealot" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
