@@ -8,12 +8,12 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Zealot'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'App new beta version check for zealot. Learn more at https://zealot.ews.im'
   s.homepage         = 'https://zealot.ews.im'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'icyleaf' => 'icyleaf.cn@gmail.com' }
-  s.source           = { :git => 'https://github.com/getzealot/zealot-ios', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/getzealot/zealot-ios.git', :tag => s.version.to_s }
   s.swift_version    = '5.1'
   
   s.ios.deployment_target = '8.0'
