@@ -43,15 +43,36 @@ import Zealot
 
 ```swift
 // Swift
-let zealot = Zealot(endpoint: "http://zealot.test",
-                  channelKey: "...")
+// 单个渠道
+let zealot = Zealot(endpoint: "http://zealot.com", channelKey: "...")
+zealot.checkVersion()
+
+// 多个渠道，比如测试版本，内测版本
+let zealot = Zealot(endpoint: "http://zealot.com",
+                 channelKeys: [
+                   "beta": "xxxxxxx",
+                   "test": "yyyyyyy"],
+          default_enviroment: "beta")
+
+// 最后触发监测方法
 zealot.checkVersion()
 ```
 
 ```objective-c
 // Objective-C
-Zealot *zealot = [[Zealot alloc] initWithEndpoint:@"http://zealot.test"
+// 单个渠道
+Zealot *zealot = [[Zealot alloc] initWithEndpoint:@"http://zealot.com"
                                        channelKey:@"..."];
+
+// 多个渠道，比如测试版本，内测版本
+Zealot *zealot = [[Zealot alloc] initWithEndpoint:@"http://zealot.com"
+                                          channelKeys:@{
+                                              @"beta": @"xxxxxxx",
+                                              @"gray": @"yyyyyyy"
+                                          }
+                                   default_enviroment:@"beta"];
+
+// 最后触发监测方法
 [zealot checkVersion];
 ```
 
