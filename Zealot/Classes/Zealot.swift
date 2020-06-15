@@ -61,19 +61,27 @@ public extension Zealot {
 private extension Zealot {
     func showAlert(_ channel: Channel) {
         guard channel.releases.count > 0 else { return }
-        let alert = createAlertVC(releases: channel.releases)
-        alert.show()
+        let alertController = createAlertVC(releases: channel.releases)
+        WindowHandler.shared.present(viewController: alertController)
     }
     
     func updateAlertAction(url: String) -> UIAlertAction {
         return UIAlertAction(title: "立即更新", style: .default) { (UIAlertAction) in
             guard let installUrl = URL(string: url) else { return }
-            UIApplication.shared.canOpenURL(installUrl)
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(installUrl, options: [:]) { _ in
+                    WindowHandler.shared.dismiss()
+                }
+            } else {
+                WindowHandler.shared.dismiss()
+                UIApplication.shared.openURL(installUrl)
+            }
         }
     }
     
     func cancelAlertAction() -> UIAlertAction {
         return UIAlertAction(title: "下次再说", style: .cancel) { (UIAlertAction) in
+            WindowHandler.shared.dismiss()
         }
     }
     
