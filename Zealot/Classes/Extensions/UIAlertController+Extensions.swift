@@ -31,13 +31,6 @@ extension UIAlertController {
         view.addConstraint(height)
     }
     
-    public func show(animated: Bool = true, style: UIBlurEffect.Style? = nil, completion: (() -> Void)? = nil) {
-        DispatchQueue.main.async {
-            let rootVC = UIApplication.shared.keyWindow?.rootViewController
-            rootVC?.present(self, animated: animated, completion: completion)
-        }
-    }
-    
     func set(vc: UIViewController?, width: CGFloat? = nil, height: CGFloat? = nil) {
         guard let vc = vc else { return }
         setValue(vc, forKey: "contentViewController")
@@ -90,5 +83,36 @@ final class TextViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         preferredContentSize.height = textView.contentSize.height
+    }
+}
+
+class WindowHandler: NSObject {
+    static let shared = WindowHandler()
+    var window: UIWindow?
+    var mainWindow: UIWindow!
+
+    @objc func present(viewController: UIViewController) {
+        if self.window != nil {
+            return
+        }
+
+        mainWindow = UIApplication.shared.windows[0]
+
+        let aWindow = UIWindow(frame: UIScreen.main.bounds)
+        aWindow.backgroundColor = UIColor.clear
+        aWindow.rootViewController = UIViewController()
+        self.window = aWindow
+
+        window?.windowLevel = UIWindow.Level.alert
+        window?.makeKeyAndVisible()
+        window?.rootViewController?.present(viewController, animated: true, completion: nil)
+    }
+
+    @objc func dismiss() {
+        window?.isHidden = true
+        window?.removeFromSuperview()
+        window = nil
+        mainWindow.makeKeyAndVisible()
+        mainWindow = nil
     }
 }
