@@ -1,6 +1,6 @@
 # Zealot iOS SDK
 
-[![CI Status](https://img.shields.io/travis/getzealot/zealot-ios.svg?style=flat)](https://travis-ci.org/getzealot/zealot-ios)
+[![CI Status](https://img.shields.io/travis/tryzealot/zealot-ios.svg?style=flat)](https://travis-ci.org/tryzealot/zealot-ios)
 [![Version](https://img.shields.io/cocoapods/v/Zealot.svg?style=flat)](https://cocoapods.org/pods/Zealot)
 [![License](https://img.shields.io/cocoapods/l/Zealot.svg?style=flat)](https://cocoapods.org/pods/Zealot)
 [![Platform](https://img.shields.io/cocoapods/p/Zealot.svg?style=flat)](https://cocoapods.org/pods/Zealot)
@@ -16,7 +16,7 @@ iOS 组件提供为 Zealot 检查新版本和安装的服务，支持 Swift 和 
 > 未达到上线标准前暂不上 Cocoapods Specs
 
 ```ruby
-pod 'Zealot', :git => 'https://github.com/getzealot/zealot-ios.git', :branch => 'master'
+pod 'Zealot', :git => 'https://github.com/tryzealot/zealot-ios.git', :branch => 'master'
 ```
 
 保存后开始安装：
