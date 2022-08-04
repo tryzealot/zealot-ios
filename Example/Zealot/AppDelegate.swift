@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         let zealot = Zealot(endpoint: "http://localhost:3000",
-                            channelKey: "5472f051af881a56add0c28291762efe")
+                            channelKey: "f9723ff4b82b66e359ee6216180e1a0d")
         zealot.checkVersion()
         
         return true

@@ -1,5 +1,5 @@
 PODS:
-  - Zealot (0.2.0)
+  - Zealot (0.2.1)
 
 DEPENDENCIES:
   - Zealot (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Zealot: bffafb65567786aa6c7eba9ea9dc983349d7f31d
+  Zealot: fdd1e7c99b233d5b92c8cf6101629178976dbbc8
 
 PODFILE CHECKSUM: 4d34a8e868575615063376cbeba0c77d5befbddd
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.11.3
