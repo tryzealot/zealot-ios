@@ -11,7 +11,7 @@ extension UIAlertController {
     @objc public func addTextView(text: String) {
         var changelog = text
         if text.isEmpty {
-            changelog = "暂无更新日志"
+            changelog = Bundle.localizedString(forKey: "Changelog is empty")
         }
 
         let textViewer = TextViewController(text: changelog)

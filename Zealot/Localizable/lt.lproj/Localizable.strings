@@ -1,0 +1,11 @@
+/* Update alert title */
+"Update Available" = "Atnaujinimas";
+
+/* Update alert dismiss button title */
+"Next time" = "Kitą kartą";
+
+/* Changelog is empty */
+"Changelog is empty" = "Pakeitimų žurnalas tuščias";
+
+/* Update alert skip button title */
+"Update" = "Atnaujinti";

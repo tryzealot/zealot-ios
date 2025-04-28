@@ -1,0 +1,11 @@
+/* Update alert title */
+"Update Available" = "Güncelleme Mevcut";
+
+/* Update alert dismiss button title */
+"Next time" = "Daha sonra";
+
+/* Changelog is empty */
+"Changelog is empty" = "Değişiklik günlüğü boş";
+
+/* Update alert skip button title */
+"Update" = "Güncelle";

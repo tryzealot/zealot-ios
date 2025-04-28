@@ -1,0 +1,11 @@
+/* Update alert title */
+"Update Available" = "Διαθέσιμη Ενημέρωση";
+
+/* Update alert dismiss button title */
+"Next time" = "Άλλη φορά";
+
+/* Changelog is empty */
+"Changelog is empty" = "Το αρχείο καταγραφής αλλαγών είναι κενό";
+
+/* Update alert skip button title */
+"Update" = "Αναβάθμιση";

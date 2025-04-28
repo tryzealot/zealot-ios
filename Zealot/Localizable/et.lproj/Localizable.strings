@@ -1,0 +1,11 @@
+/* Update alert title */
+"Update Available" = "Uuendus saadaval";
+
+/* Update alert dismiss button title */
+"Next time" = "Järgmisel korral";
+
+/* Changelog is empty */
+"Changelog is empty" = "Muudatuste logi on tühi";
+
+/* Update alert skip button title */
+"Update" = "Uuenda";

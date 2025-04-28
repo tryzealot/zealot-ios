@@ -66,7 +66,8 @@ private extension Zealot {
     }
 
     func updateAlertAction(url: String) -> UIAlertAction {
-        return UIAlertAction(title: "立即更新", style: .default) { (UIAlertAction) in
+        let title = Bundle.localizedString(forKey: "Update")
+        return UIAlertAction(title: title, style: .default) { (UIAlertAction) in
             guard let installUrl = URL(string: url) else { return }
             if #available(iOS 10.0, *) {
                 UIApplication.shared.open(installUrl, options: [:]) { _ in
@@ -80,7 +81,8 @@ private extension Zealot {
     }
 
     func cancelAlertAction() -> UIAlertAction {
-        return UIAlertAction(title: "下次再说", style: .cancel) { (UIAlertAction) in
+        let title = Bundle.localizedString(forKey: "Next time")
+        return UIAlertAction(title: title, style: .cancel) { (UIAlertAction) in
             WindowHandler.shared.dismiss()
         }
     }
@@ -88,7 +90,7 @@ private extension Zealot {
     func createAlertVC(releases: [Channel.Release]) -> UIAlertController {
         let release = releases[0]
 
-        let title = "⭐️发现新版本⭐️"
+        let title = Bundle.localizedString(forKey: "Update Available")
         let message = "\(release.releaseVersion) (\(release.buildVersion))"
         let changelog = generateChangelog(releases: releases)
 

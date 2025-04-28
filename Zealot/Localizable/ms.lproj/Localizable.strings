@@ -1,0 +1,11 @@
+/* Update alert title */
+"Update Available" = "Versi Terkini";
+
+/* Update alert dismiss button title */
+"Next time" = "Lain kali";
+
+/* Changelog is empty */
+"Changelog is empty" = "Changelog kosong";
+
+/* Update alert skip button title */
+"Update" = "Muat turun";
