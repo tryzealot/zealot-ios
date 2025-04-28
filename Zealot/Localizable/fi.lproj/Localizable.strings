@@ -1,0 +1,11 @@
+/* Update alert title */
+"Update Available" = "Päivitys saatavilla";
+
+/* Update alert dismiss button title */
+"Next time" = "Ensi kerralla";
+
+/* Changelog is empty */
+"Changelog is empty" = "Muutosloki on tyhjä";
+
+/* Update alert skip button title */
+"Update" = "Päivitys";

@@ -1,0 +1,11 @@
+/* Update alert title */
+"Update Available" = "Novo ažuriranje je dostupno";
+
+/* Update alert dismiss button title */
+"Next time" = "Sljedeći put";
+
+/* Changelog is empty */
+"Changelog is empty" = "Dnevnik promjena je prazan";
+
+/* Update alert skip button title */
+"Update" = "Ažuriraj";

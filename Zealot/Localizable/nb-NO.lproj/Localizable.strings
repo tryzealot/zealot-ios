@@ -1,0 +1,11 @@
+/* Update alert title */
+"Update Available" = "Oppdatering tilgjengelig";
+
+/* Update alert dismiss button title */
+"Next time" = "Neste gang";
+
+/* Changelog is empty */
+"Changelog is empty" = "Endringsloggen er tom";
+
+/* Update alert skip button title */
+"Update" = "Oppdater";

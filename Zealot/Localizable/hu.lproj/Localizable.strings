@@ -1,0 +1,11 @@
+/* Update alert title */
+"Update Available" = "Új frissítés érhető el";
+
+/* Update alert dismiss button title */
+"Next time" = "Később";
+
+/* Changelog is empty */
+"Changelog is empty" = "A változásnapló üres";
+
+/* Update alert skip button title */
+"Update" = "Frissítés";

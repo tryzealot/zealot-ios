@@ -19,4 +19,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'Zealot/Classes/**/*.swift'
+  s.resource_bundles = { "Zealot" => ["Zealot/Localizable/*.lproj/*.strings"] }
 end
